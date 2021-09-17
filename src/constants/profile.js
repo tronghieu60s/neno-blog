@@ -1,9 +1,8 @@
 const profile = {
-  "profile.title": "Hello I'm",
-  "profile.name": "Trọng Hiếu",
+  "profile.title": "Hello, I'm Trọng Hiếu",
   "profile.contents": [
     {
-      "profile.contents.url": "#/profile/contents/basic",
+      "profile.contents.url": "/blog",
       "profile.contents.title": "Visit my blog",
     },
     {

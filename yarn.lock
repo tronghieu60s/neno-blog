@@ -2467,6 +2467,14 @@ notion-utils@^4.8.2:
     notion-types "^4.8.2"
     p-queue "^6.6.1"
 
+notion-utils@^4.8.6:
+  version "4.8.6"
+  resolved "https://registry.yarnpkg.com/notion-utils/-/notion-utils-4.8.6.tgz#cc10b3b5b6d7c54686404880a9008babbbe76651"
+  integrity sha512-FM//qr5la71mnU1Sw5elfKbcbsBtDNi8wdtBeFGVXCLm0UYpNEAqfSAgf35EfuJ3AeMghCC8ge5ML+9bBpceUQ==
+  dependencies:
+    notion-types "^4.8.2"
+    p-queue "^6.6.1"
+
 object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
