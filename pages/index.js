@@ -13,11 +13,7 @@ export default function index() {
         {profile["profile.contents"].map((content, index) => (
           <div key={index}>
             &gt;{" "}
-            <Link
-              href={content["profile.contents.url"]}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <Link href={content["profile.contents.url"]}>
               {content["profile.contents.title"]}
             </Link>
           </div>
