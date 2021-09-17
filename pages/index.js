@@ -1,11 +1,15 @@
+import Head from "next/head";
 import Link from "next/link";
-import profile from '../const/profile';
+import profile from "../const/profile";
 
 export default function index() {
   return (
-    <main className="neno-content">
-      <div className="neno-content-inner">
-        <p>{profile["profile.title"]}</p>
+    <>
+      <Head>
+        <title>{profile["profile.title"]}</title>
+      </Head>
+      <main className="neno-profile">
+        <p>{profile["profile.hello"]}</p>
         {profile["profile.contents"].map((content, index) => (
           <div key={index}>
             &gt;{" "}
@@ -18,7 +22,7 @@ export default function index() {
             </Link>
           </div>
         ))}
-      </div>
-    </main>
+      </main>
+    </>
   );
 }

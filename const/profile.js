@@ -1,6 +1,11 @@
 const profile = {
-  "profile.title": "Hello, I'm Trọng Hiếu",
+  "profile.title": "Trọng Hiếu's Profile",
+  "profile.hello": "Hello, I'm Trọng Hiếu",
   "profile.contents": [
+    {
+      "profile.contents.url": "https://github.com/tronghieu60s",
+      "profile.contents.title": "Find me on GitHub",
+    },
     {
       "profile.contents.url": "/blog",
       "profile.contents.title": "Visit my blog",
