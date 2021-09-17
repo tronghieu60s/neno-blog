@@ -9,7 +9,9 @@ export default function index() {
         <title>{profile["profile.title"]}</title>
       </Head>
       <main className="neno-profile">
-        <p>{profile["profile.hello"]}</p>
+        <p>
+          {profile["profile.hello"]} <b>{profile["profile.author"]}</b>.
+        </p>
         {profile["profile.contents"].map((content, index) => (
           <div key={index}>
             &gt;{" "}

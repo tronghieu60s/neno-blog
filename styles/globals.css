@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Common Styles */
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
 }
 
 body {
@@ -15,13 +27,7 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  color: inherit;
-}
+/* Custom Styles */
 
 .neno-container {
   max-width: 1200px;
@@ -29,7 +35,7 @@ a:visited {
 }
 
 .neno-profile {
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 30px;
   font-family: monospace;
   margin: 3em 1em;
@@ -49,4 +55,41 @@ a:visited {
 
 .neno-profile a:hover {
   text-decoration: underline;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f5f7;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: #2b2e34;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Notion Styles */
+
+/* .notion > * {
+  padding: 0;
+} */
+
+.notion-page {
+  width: 80%;
+}
+
+.notion-title {
+  font-size: 2.3em;
+}
+
+.notion-page-scroller {
+  min-height: 0;
 }

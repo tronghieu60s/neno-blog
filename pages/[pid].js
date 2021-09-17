@@ -31,6 +31,9 @@ export async function getStaticPaths() {
   return { paths, fallback: true };
 }
 
+const defaultPageCover =
+  "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5";
+
 export default function Blog({ recordMap }) {
   if (!recordMap) {
     return null;
@@ -41,7 +44,11 @@ export default function Blog({ recordMap }) {
       <Head>
         <title>{getPageTitle(recordMap)}</title>
       </Head>
-      <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />
+      <NotionRenderer
+        recordMap={recordMap}
+        fullPage={true}
+        darkMode={false}
+      />
     </>
   );
 }
