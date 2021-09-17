@@ -1,16 +1,52 @@
-html,
-body {
-  padding: 0;
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: "Merriweather", serif;
+  background-image: radial-gradient(#ddd 1px, transparent 0),
+    radial-gradient(#ddd 1px, transparent 0);
+  background-position: 0 0, 25px 25px;
+  background-attachment: fixed;
+  background-size: 50px 50px;
+  overflow-x: hidden;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+a:visited {
+  color: inherit;
+}
+
+.neno-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.neno-content {
+  display: flex;
+  justify-content: center;
+}
+
+.neno-content-inner {
+  font-size: 1.5em;
+  line-height: 30px;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3em 1em;
+}
+
+.neno-content-inner a {
+  color: #000;
+}
+
+.neno-content-inner a:hover {
+  text-decoration: underline;
 }
