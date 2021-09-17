@@ -1,8 +1,6 @@
-import { NotionAPI } from "notion-client";
 import { getAllPagesInSpace } from "notion-utils";
 import { NotionRenderer } from "react-notion-x";
-
-const notion = new NotionAPI({ authToken: process.env.NOTION_TOKEN_V2 });
+import notion from "../core/notion";
 
 export const getStaticProps = async (context) => {
   const pageId = context.params.pid;
