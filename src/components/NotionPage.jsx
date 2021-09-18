@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
+import { getPageTitle } from "notion-utils";
+import { useCallback, useEffect } from "react";
 import {
   Code,
   Collection,
   CollectionRow,
   NotionRenderer,
 } from "react-notion-x";
-import { getPageTitle } from "notion-utils";
-import { useCallback, useEffect } from "react";
 import Footer from "./Footer";
 
 export default function NotionPage(props) {

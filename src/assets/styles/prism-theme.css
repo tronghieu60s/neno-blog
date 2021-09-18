@@ -92,7 +92,7 @@
   color: rgba(245, 158, 11, 1);
 }
 
-/* code[class*="language-"],
+code[class*="language-"],
 pre[class*="language-"] {
   color: rgba(31, 41, 55, 1);
 }
@@ -100,7 +100,11 @@ pre[class*="language-"] {
 .dark-mode code[class*="language-"],
 .dark-mode pre[class*="language-"] {
   color: rgba(249, 250, 251, 1);
-} */
+}
+
+:not(pre)>code[class*=language-], pre[class*=language-] {
+  background: rgb(249, 250, 251, 1);
+}
 
 pre::-webkit-scrollbar {
   display: none;
