@@ -11,9 +11,7 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          <div className="neno-container">
-            <Main />
-          </div>
+          <Main />
           <NextScript />
         </body>
       </Html>

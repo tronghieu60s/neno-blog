@@ -7,9 +7,21 @@ import {
   NotionRenderer,
 } from "react-notion-x";
 import { getPageTitle } from "notion-utils";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
+import Footer from "./Footer";
 
-export default function NotionPage({ recordMap }) {
+export default function NotionPage(props) {
+  const { recordMap, showTableOfContents } = props;
+
+  useEffect(() => {
+    const contentHeader = document.querySelector(
+      ".notion-aside-table-of-contents-header"
+    );
+    if (contentHeader) {
+      contentHeader.innerHTML = "Mục Lục";
+    }
+  }, [recordMap]);
+
   const pageLink = useCallback(
     (item) => (
       <Link {...item}>
@@ -23,12 +35,10 @@ export default function NotionPage({ recordMap }) {
     return null;
   }
 
-  const pageTitle = getPageTitle(recordMap);
-
   return (
     <>
       <Head>
-        <title>{pageTitle}</title>
+        <title>{getPageTitle(recordMap)}</title>
       </Head>
       <NotionRenderer
         components={{
@@ -38,7 +48,11 @@ export default function NotionPage({ recordMap }) {
           collectionRow: CollectionRow,
         }}
         recordMap={recordMap}
-        pageHeader={<h1 className="notion-title">{pageTitle}</h1>}
+        fullPage={true}
+        darkMode={false}
+        showTableOfContents={showTableOfContents}
+        minTableOfContentsItems={3}
+        footer={<Footer />}
       />
     </>
   );

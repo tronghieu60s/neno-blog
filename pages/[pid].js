@@ -9,7 +9,12 @@ export const getStaticProps = async (context) => {
   const pageId = pid === "blog" ? process.env.NOTION_BLOG_PAGE : pid;
   try {
     const recordMap = await notion.getPage(pageId);
-    return { props: { recordMap } };
+    return {
+      props: {
+        recordMap,
+        showTableOfContents: pid !== process.env.NOTION_BLOG_PAGE,
+      },
+    };
   } catch (error) {
     return { notFound: true };
   }

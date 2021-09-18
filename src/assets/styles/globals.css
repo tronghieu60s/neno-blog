@@ -5,6 +5,10 @@
 
 /* Common Styles */
 
+:root {
+  --select-color-1: hsl(60, 100%, 83%);
+}
+
 a {
   text-decoration: none;
 }
@@ -55,10 +59,18 @@ body {
   text-decoration: underline;
 }
 
+.neno-footer {
+  margin: 3em;
+  font-size: .95em;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
 /* Scrollbar */
 
 ::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
