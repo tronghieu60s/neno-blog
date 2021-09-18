@@ -1,7 +1,6 @@
-import Head from "next/head";
-import { getAllPagesInSpace, getPageTitle } from "notion-utils";
-import { NotionRenderer } from "react-notion-x";
-import notion from "../core/notion";
+import { getAllPagesInSpace } from "notion-utils";
+import NotionPage from "../src/components/NotionPage";
+import notion from "../src/utils/notion";
 
 const isDev = process.env.NODE_ENV === "development" || !process.env.NODE_ENV;
 
@@ -31,24 +30,6 @@ export async function getStaticPaths() {
   return { paths, fallback: true };
 }
 
-const defaultPageCover =
-  "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5";
-
-export default function Blog({ recordMap }) {
-  if (!recordMap) {
-    return null;
-  }
-
-  return (
-    <>
-      <Head>
-        <title>{getPageTitle(recordMap)}</title>
-      </Head>
-      <NotionRenderer
-        recordMap={recordMap}
-        fullPage={true}
-        darkMode={false}
-      />
-    </>
-  );
+export default function NotionDynamicPage(props) {
+  return <NotionPage {...props} />;
 }

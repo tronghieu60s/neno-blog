@@ -1,26 +1,3 @@
-import Head from "next/head";
-import Link from "next/link";
-import profile from "../const/profile";
+import HomePage from '../src/components/HomePage';
 
-export default function index() {
-  return (
-    <>
-      <Head>
-        <title>{profile["profile.title"]}</title>
-      </Head>
-      <main className="neno-profile">
-        <p>
-          {profile["profile.hello"]} <b>{profile["profile.author"]}</b>.
-        </p>
-        {profile["profile.contents"].map((content, index) => (
-          <div key={index}>
-            &gt;{" "}
-            <Link href={content["profile.contents.url"]}>
-              {content["profile.contents.title"]}
-            </Link>
-          </div>
-        ))}
-      </main>
-    </>
-  );
-}
+export default HomePage;

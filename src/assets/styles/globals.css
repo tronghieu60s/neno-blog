@@ -16,12 +16,11 @@ a:visited {
 body {
   background: #fff;
   color: #000;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-image: radial-gradient(#ddd 1px, transparent 0),
-    radial-gradient(#ddd 1px, transparent 0);
   background-position: 0 0, 25px 25px;
   background-attachment: fixed;
   background-size: 50px 50px;
+  background-image: radial-gradient(#ddd 1px, transparent 0),
+    radial-gradient(#ddd 1px, transparent 0);
   overflow-x: hidden;
 }
 
@@ -30,6 +29,7 @@ body {
 .neno-container {
   max-width: 1200px;
   margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .neno-profile {
@@ -72,22 +72,4 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
-
-/* Notion Styles */
-
-/* .notion > * {
-  padding: 0;
-} */
-
-.notion-page {
-  width: 80%;
-}
-
-.notion-title {
-  font-size: 2.3em;
-}
-
-.notion-page-scroller {
-  min-height: 0;
 }
