@@ -7,41 +7,28 @@ import {
   NotionRenderer,
 } from "react-notion-x";
 import { getPageTitle } from "notion-utils";
+import { useCallback } from "react";
 
 export default function NotionPage({ recordMap }) {
-    if (!recordMap) {
+  const pageLink = useCallback(
+    (item) => (
+      <Link {...item}>
+        <a {...item} />
+      </Link>
+    ),
+    []
+  );
+
+  if (!recordMap) {
     return null;
   }
 
-  const pageLink = ({
-    href,
-    as,
-    passHref,
-    prefetch,
-    replace,
-    scroll,
-    shallow,
-    locale,
-    ...props
-  }) => (
-    <Link
-      href={href}
-      as={as}
-      passHref={passHref}
-      prefetch={prefetch}
-      replace={replace}
-      scroll={scroll}
-      shallow={shallow}
-      locale={locale}
-    >
-      <a {...props} />
-    </Link>
-  );
+  const pageTitle = getPageTitle(recordMap);
 
   return (
     <>
       <Head>
-        <title>{getPageTitle(recordMap)}</title>
+        <title>{pageTitle}</title>
       </Head>
       <NotionRenderer
         components={{
@@ -51,8 +38,7 @@ export default function NotionPage({ recordMap }) {
           collectionRow: CollectionRow,
         }}
         recordMap={recordMap}
-        fullPage={true}
-        darkMode={false}
+        pageHeader={<h1 className="notion-title">{pageTitle}</h1>}
       />
     </>
   );

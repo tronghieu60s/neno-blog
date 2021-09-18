@@ -6,6 +6,11 @@
  * whereas our goal with this site is to adjust Notion's styling in a few key
  * places to add some flare.
  */
+ 
+::selection {
+  background-color: #ffa;
+  color: #000;
+}
 
 .notion {
   --notion-max-width: 720px;
@@ -15,14 +20,36 @@
 .notion-page {
   padding-bottom: calc(max(5vh, 32px)) !important;
   line-height: 1.65;
+  font-family: "Montserrat", sans-serif;
 }
 
 .notion-page-link {
+  height: auto;
   margin: 5px 0;
 }
 
 .notion-page-no-cover {
   margin-top: 24px !important;
+}
+
+.notion-title {
+  display: block;
+  text-align: center;
+  font-size: 2.3em;
+  margin-top: 40px;
+}
+
+.notion-title::before {
+  content: "#";
+  color: #ccc;
+  margin-right: 8px;
+  margin-left: -20px;
+  font-weight: normal;
+}
+
+.notion-page-title-text {
+  white-space: normal;
+  border-bottom-width: 0;
 }
 
 .index-page {
@@ -146,16 +173,6 @@
   .notion-title {
     font-size: 1.8em;
   }
-
-  .notion-page-link {
-    height: auto;
-    margin: 10px 0;
-  }
-
-  .notion-page-title-text {
-    white-space: normal;
-    border-bottom-width: 0;
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -175,11 +192,6 @@
 .notion .notion-page-icon-cover {
   margin-left: auto;
   margin-right: auto;
-}
-
-.notion-title {
-  display: block;
-  text-align: center;
 }
 
 .notion-collection-column-title {
