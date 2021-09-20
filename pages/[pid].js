@@ -3,18 +3,20 @@ import NotionPage from "../src/components/NotionPage";
 import notion from "../src/utils/notion";
 
 const isDev = process.env.NODE_ENV === "development" || !process.env.NODE_ENV;
+let pageId;
 
 export const getStaticProps = async (context) => {
   const pid = context.params.pid;
-  const pageId = pid === "blog" ? process.env.NOTION_BLOG_PAGE : pid;
+
+  if (pid === "blog") {
+    pageId = process.env.NOTION_BLOG_PAGE;
+  } else {
+    pageId = pid;
+  }
+
   try {
     const recordMap = await notion.getPage(pageId);
-    return {
-      props: {
-        recordMap,
-        showTableOfContents: pid !== process.env.NOTION_BLOG_PAGE,
-      },
-    };
+    return { props: { recordMap } };
   } catch (error) {
     return { notFound: true };
   }

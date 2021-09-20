@@ -11,7 +11,7 @@ import {
 import Footer from "./Footer";
 
 export default function NotionPage(props) {
-  const { recordMap, showTableOfContents } = props;
+  const { recordMap } = props;
 
   useEffect(() => {
     const contentHeader = document.querySelector(
@@ -50,7 +50,7 @@ export default function NotionPage(props) {
         recordMap={recordMap}
         fullPage={true}
         darkMode={false}
-        showTableOfContents={showTableOfContents}
+        showTableOfContents={true}
         minTableOfContentsItems={3}
         footer={<Footer />}
       />

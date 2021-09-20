@@ -5,9 +5,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, config environment variables:
 
 ```
-# Require
-NOTION_BLOG_PAGE=
 NOTION_TOKEN_V2=
+NOTION_BLOG_PAGE=
 ```
 
 Second, run the development server:
